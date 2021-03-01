@@ -1,0 +1,46 @@
+<app-header></app-header>
+<div class="container">
+          <div class="col-xs-6" >
+                <div class="row background-and-border">
+                  <p>Számla Lista</p>                    
+                          <app-szamla-lista
+                          *ngFor="let szamlaElement of szamlaLista"
+                          [szmlElement]="szamlaElement">                        
+                          <table class="table">
+                            <thead>
+                              <tr>
+                                <th>#</th>
+                                <th>Számla neve</th>
+                                <th>Név Értéke</th>
+                                <th>Pénznem</th>
+                                <th>Státusz</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>                  
+                                <td>{{ szamlaElement.szamla_azonosito }}</td>
+                                <td>{{ szamlaElement.szamla_neve }}</td>
+                                <td>{{ szamlaElement.szamla_nevErteke }}</td>
+                                <td>{{ szamlaElement.szamla_penzNeme }}</td>
+                                <td>{{ szamlaElement.szamla_statusza }}</td>
+                              </tr>
+                            </tbody>
+                          </table></app-szamla-lista>
+                        <!--<em *ngIf="szmlElement.type === 'blueprint'">{{ szmlElement.content }}</em> -->
+
+                </div>
+        </div>
+      
+        <div class="row background-and-border col-sm-6 ">
+
+                <div>
+                        <app-szamla-rogzites
+                          (szmlCreated)="onServerAdded($event)"
+                          ></app-szamla-rogzites>
+                        
+                </div>   
+                
+                
+
+        </div>
+</div>

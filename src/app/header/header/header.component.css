@@ -1,0 +1,8 @@
+nav{
+  
+    background-color: rgb(104, 11, 104);
+    border: outset 4px lightpink;
+}
+.nav.navbar-nav li a,.navbar-brand {
+    color: white;
+}

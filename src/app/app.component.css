@@ -1,0 +1,21 @@
+
+  .background-and-border{
+  
+    background-color: rgb(104, 11, 104);
+    border: outset 4px lightpink;
+}
+table,div {
+    color:white;
+}
+thead{
+background-color: rgb(39, 35, 35);
+}
+.table {
+    margin: auto; 
+    text-align: left;
+ }
+div{
+    margin: auto;
+    padding: 1%;
+}
+

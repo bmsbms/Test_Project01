@@ -1,0 +1,59 @@
+   <div class="col-xs-12">
+      <p>Számla hozzáadása!</p>
+      <label>Neve</label>
+      <!-- <input type="text" class="form-control" [(ngModel)]="newServerName"> -->
+      <input 
+      type="text" 
+      class="form-control"
+      #szamla_neve_Input
+      minLength="0"
+      maxLength="25"
+      >
+      <label>Nevének értéke</label>
+      <input 
+      type="number" 
+      class="form-control"
+      min="0"
+      #szamla_nevErteke_Input 
+      
+      >
+      <label>Pénznem</label>
+      <select 
+      type="text" 
+      class="form-control"
+      #szamla_penzNeme_Input
+      required
+      >
+      <option >HUF</option>
+      <option >EUR</option>
+      <option >USD</option>  
+        </select>
+      <label>Számla státusza</label>
+      <select 
+      type="text" 
+      class="form-control"
+      #szamla_statusza_Input 
+      >
+      <option >+</option>
+      <option >-</option>  
+        </select>
+      <br>
+                
+                <button
+                    class="btn btn-primary"
+                    type="submit"
+                    (click)="onAddSzamla(szamla_neve_Input,szamla_nevErteke_Input,szamla_penzNeme_Input,szamla_statusza_Input)"
+                    (click) = "szamla_neve_Input.value = ''"
+                    (click) = "szamla_nevErteke_Input.value = ''"
+                    
+                    >Add Server</button>
+                
+                    <button
+                    class="btn btn-warning"
+                    type="button"
+                    (click) = "szamla_neve_Input.value = ''"
+                    (click) = "szamla_nevErteke_Input.value = ''"
+                    >Clear</button>
+                    
+                
+    </div>
